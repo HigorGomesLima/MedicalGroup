@@ -174,6 +174,9 @@ public class AlterarConsulta extends javax.swing.JInternalFrame {
                 this.text_dataConsulta.setText(atual.getInicio().substring(0, 11));
                 this.text_horario.setText(atual.getInicio().substring(11, 16));
                 this.text_medico.setText(atual.getProfissional().getNome());
+                JOptionPane.showMessageDialog(null, "Alterações realizadas com sucesso" );
+            }else{
+                JOptionPane.showMessageDialog(null, "Erro: Selecionar consulta" );
             }
         } catch (RemoteException ex) {
            JOptionPane.showMessageDialog(null, "Erro de cadastro" );

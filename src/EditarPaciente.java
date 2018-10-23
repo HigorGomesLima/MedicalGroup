@@ -191,7 +191,7 @@ public class EditarPaciente extends javax.swing.JInternalFrame {
 
     private void botao_salvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_salvarActionPerformed
         if(atual == null){
-            JOptionPane.showMessageDialog(null, "Erro para salvar" );
+            JOptionPane.showMessageDialog(null, "Erro de cadastro" );
         }else{
             atual.setNome(this.text_nome.getText());
             atual.setCpf(this.text_cpf.getText());
@@ -199,8 +199,9 @@ public class EditarPaciente extends javax.swing.JInternalFrame {
             atual.setEndereco(this.text_endereco.getText());
             try {
                 rmi.setCliente(atual);
+                JOptionPane.showMessageDialog(null, "Alterações realizadas" );
             } catch (RemoteException ex) {
-                Logger.getLogger(EditarPaciente.class.getName()).log(Level.SEVERE, null, ex);
+                JOptionPane.showMessageDialog(null, "Erro de cadastro" );
             }
         }
     }//GEN-LAST:event_botao_salvarActionPerformed

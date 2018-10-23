@@ -54,7 +54,9 @@ public class Principal_Profissional extends javax.swing.JFrame {
         tabela_consultasProfissional = new javax.swing.JTable();
         jSeparator2 = new javax.swing.JSeparator();
         jMenuBar1 = new javax.swing.JMenuBar();
-        menu_sair = new javax.swing.JMenu();
+        menu_exibir = new javax.swing.JMenu();
+        ordem_data = new javax.swing.JCheckBoxMenuItem();
+        ordem_nome = new javax.swing.JCheckBoxMenuItem();
         menu_consulta = new javax.swing.JMenu();
         menu_iniciarConsulta = new javax.swing.JMenuItem();
 
@@ -123,14 +125,26 @@ public class Principal_Profissional extends javax.swing.JFrame {
 
         jMenuBar1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
 
-        menu_sair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/door_out.png"))); // NOI18N
-        menu_sair.setText("Sair");
-        menu_sair.addActionListener(new java.awt.event.ActionListener() {
+        menu_exibir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/page.png"))); // NOI18N
+        menu_exibir.setText("Exibir");
+        menu_exibir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menu_sairActionPerformed(evt);
+                menu_exibirActionPerformed(evt);
             }
         });
-        jMenuBar1.add(menu_sair);
+
+        ordem_data.setText("Ordem por Data");
+        menu_exibir.add(ordem_data);
+
+        ordem_nome.setText("Ordem por Nome");
+        ordem_nome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ordem_nomeActionPerformed(evt);
+            }
+        });
+        menu_exibir.add(ordem_nome);
+
+        jMenuBar1.add(menu_exibir);
 
         menu_consulta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/group.png"))); // NOI18N
         menu_consulta.setText("Consulta");
@@ -186,15 +200,19 @@ public class Principal_Profissional extends javax.swing.JFrame {
         telaIniciarConsulta.setVisible(true);
     }//GEN-LAST:event_menu_iniciarConsultaActionPerformed
 
-    private void menu_sairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_sairActionPerformed
-        this.setVisible(false);
-        exit();
-    }//GEN-LAST:event_menu_sairActionPerformed
-
     private void tabela_consultasProfissionalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabela_consultasProfissionalMouseClicked
         //Seleção na grid
         
     }//GEN-LAST:event_tabela_consultasProfissionalMouseClicked
+
+    private void menu_exibirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_exibirActionPerformed
+        this.setVisible(false);
+        exit();
+    }//GEN-LAST:event_menu_exibirActionPerformed
+
+    private void ordem_nomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ordem_nomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ordem_nomeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -237,8 +255,10 @@ public class Principal_Profissional extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JMenu menu_consulta;
+    private javax.swing.JMenu menu_exibir;
     private javax.swing.JMenuItem menu_iniciarConsulta;
-    private javax.swing.JMenu menu_sair;
+    private javax.swing.JCheckBoxMenuItem ordem_data;
+    private javax.swing.JCheckBoxMenuItem ordem_nome;
     private javax.swing.JPanel panel_calendario;
     private javax.swing.JTable tabela_consultasProfissional;
     // End of variables declaration//GEN-END:variables

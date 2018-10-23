@@ -157,6 +157,7 @@ public class IniciarConsulta extends javax.swing.JInternalFrame {
         if(atual != null){
             String texto = this.texto_descricao.getText();
             rede.addDescricao(atual, texto);
+            JOptionPane.showMessageDialog(null, "Inserido descrição" );
         }else{
             JOptionPane.showMessageDialog(null, "Erro de cadastro" );
         }

@@ -40,16 +40,16 @@ public class Sobre extends javax.swing.JInternalFrame {
         panel_sobreLayout.setHorizontalGroup(
             panel_sobreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_sobreLayout.createSequentialGroup()
-                .addGap(72, 72, 72)
+                .addGap(74, 74, 74)
                 .addComponent(jLabel1)
-                .addContainerGap(85, Short.MAX_VALUE))
+                .addContainerGap(83, Short.MAX_VALUE))
         );
         panel_sobreLayout.setVerticalGroup(
             panel_sobreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_sobreLayout.createSequentialGroup()
-                .addGap(67, 67, 67)
+                .addGap(43, 43, 43)
                 .addComponent(jLabel1)
-                .addContainerGap(100, Short.MAX_VALUE))
+                .addContainerGap(128, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

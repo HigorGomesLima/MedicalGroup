@@ -72,7 +72,6 @@ public class Principal_Funcionario extends javax.swing.JFrame {
         separador = new javax.swing.JSeparator();
         desktop_funcionario = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
-        menu_sair = new javax.swing.JMenu();
         menu_paciente = new javax.swing.JMenu();
         menu_cadastrarPaciente = new javax.swing.JMenuItem();
         menu_editarPaciente = new javax.swing.JMenuItem();
@@ -137,15 +136,6 @@ public class Principal_Funcionario extends javax.swing.JFrame {
             desktop_funcionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
-
-        menu_sair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/door_out.png"))); // NOI18N
-        menu_sair.setText("Sair");
-        menu_sair.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menu_sairActionPerformed(evt);
-            }
-        });
-        jMenuBar1.add(menu_sair);
 
         menu_paciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/user.png"))); // NOI18N
         menu_paciente.setText("Paciente");
@@ -262,16 +252,6 @@ public class Principal_Funcionario extends javax.swing.JFrame {
         desktop_funcionario.add(telaSobre);
         telaSobre.setVisible(true);
     }//GEN-LAST:event_menu_sobreActionPerformed
-
-    private void menu_sairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_sairActionPerformed
-        Login telaLogin = null;
-        try {
-            telaLogin = new Login();
-        } catch (RemoteException ex) {
-            Logger.getLogger(Principal_Funcionario.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        telaLogin.setVisible(true);
-    }//GEN-LAST:event_menu_sairActionPerformed
     /* --------- FIM DO SETANDO J INTERNAL FRAME --------- */
     
     public static void main(String args[]) {
@@ -320,7 +300,6 @@ public class Principal_Funcionario extends javax.swing.JFrame {
     private javax.swing.JMenuItem menu_editarConsulta;
     private javax.swing.JMenuItem menu_editarPaciente;
     private javax.swing.JMenu menu_paciente;
-    private javax.swing.JMenu menu_sair;
     private javax.swing.JMenu menu_sobre;
     private javax.swing.JPanel panel_calendario;
     private javax.swing.JSeparator separador;
