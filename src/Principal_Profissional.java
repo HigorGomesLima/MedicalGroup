@@ -34,6 +34,10 @@ public class Principal_Profissional extends javax.swing.JFrame {
     private void att(){
 
         Iterator<Consulta> it = rede.consulta(nome);
+        if(this.ordem_data.isSelected())
+            it = new SortData().sort(it);
+        if(this.ordem_nome.isSelected())
+            it = new SortNome().sort(it);
         DefaultTableModel model = (DefaultTableModel) this.tabela_consultasProfissional.getModel();
         for(;model.getRowCount() != 0;)
             model.removeRow(0);
@@ -125,7 +129,6 @@ public class Principal_Profissional extends javax.swing.JFrame {
 
         jMenuBar1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
 
-        menu_exibir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/page.png"))); // NOI18N
         menu_exibir.setText("Exibir");
         menu_exibir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -134,6 +137,11 @@ public class Principal_Profissional extends javax.swing.JFrame {
         });
 
         ordem_data.setText("Ordem por Data");
+        ordem_data.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ordem_dataActionPerformed(evt);
+            }
+        });
         menu_exibir.add(ordem_data);
 
         ordem_nome.setText("Ordem por Nome");
@@ -211,8 +219,12 @@ public class Principal_Profissional extends javax.swing.JFrame {
     }//GEN-LAST:event_menu_exibirActionPerformed
 
     private void ordem_nomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ordem_nomeActionPerformed
-        // TODO add your handling code here:
+        att();
     }//GEN-LAST:event_ordem_nomeActionPerformed
+
+    private void ordem_dataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ordem_dataActionPerformed
+        att();
+    }//GEN-LAST:event_ordem_dataActionPerformed
 
     /**
      * @param args the command line arguments
